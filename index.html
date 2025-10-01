@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Solutions - Bangladesh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #0a192f;
+            color: #ccd6f6;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background: #112240;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #64ffda;
+        }
+        
+        .nav-links a {
+            color: #ccd6f6;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #64ffda;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #0a192f 0%, #112240 100%);
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #64ffda;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: #8892b0;
+        }
+        
+        .btn {
+            background: #64ffda;
+            color: #0a192f;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn:hover {
+            background: #52e0c4;
+            transform: translateY(-2px);
+        }
+        
+        .scan-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: #112240;
+        }
+        
+        .scan-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #0a192f;
+            padding: 3rem;
+            border-radius: 10px;
+            border: 1px solid #64ffda;
+        }
+        
+        .scan-form {
+            margin-top: 2rem;
+        }
+        
+        .scan-form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 1rem;
+            border: 1px solid #233554;
+            background: #112240;
+            color: white;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .services {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .services h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #64ffda;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: #112240;
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid #233554;
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #64ffda;
+        }
+        
+        .service-card h3 {
+            color: #64ffda;
+            margin-bottom: 1rem;
+        }
+        
+        .contact {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        footer {
+            background: #020c1b;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            color: #8892b0;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">CyberSecurity.BD</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#scan">Security Scan</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Secure Your Digital Bangladesh</h1>
+        <p>We provide cutting-edge cybersecurity solutions for businesses and individuals. Protect your websites, applications, and data from modern threats.</p>
+        <a href="#scan" class="btn">Get Free Security Scan</a>
+    </section>
+
+    <!-- Security Scan Section -->
+    <section class="scan-section" id="scan">
+        <div class="scan-container">
+            <h2>Free Website Security Scan</h2>
+            <p>Enter your website URL to get a comprehensive security analysis</p>
+            
+            <div class="scan-form">
+                <input type="url" placeholder="https://yourwebsite.com" id="websiteUrl">
+                <input type="email" placeholder="your@email.com" id="userEmail">
+                <button class="btn" onclick="startSecurityScan()" style="width: 100%;">
+                    Start Security Scan
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Security Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Website Vulnerability Scan</h3>
+                <p>Comprehensive security scanning for your website to detect vulnerabilities and security gaps.</p>
+            </div>
+            <div class="service-card">
+                <h3>Malware Detection & Removal</h3>
+                <p>Advanced malware scanning and complete removal services for infected systems.</p>
+            </div>
+            <div class="service-card">
+                <h3>Security Audit</h3>
+                <p>Complete security assessment with detailed reports and actionable recommendations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Ready to Secure Your Business?</h2>
+        <p>Contact us for a free security assessment</p>
+        <a href="mailto:contact@cybersecurity.bd" class="btn" style="margin-top: 1rem;">Contact Us Now</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 CyberSecurity.BD | All Rights Reserved</p>
+        <p style="margin-top: 0.5rem;">Email: contact@cybersecurity.bd | Phone: +880 XXXX-XXXXXX</p>
+    </footer>
+
+    <script>
+        function startSecurityScan() {
+            const websiteUrl = document.getElementById('websiteUrl').value;
+            const userEmail = document.getElementById('userEmail').value;
+            
+            if (!websiteUrl || !userEmail) {
+                alert('Please enter both website URL and email address');
+                return;
+            }
+            
+            // Show loading message
+            const scanButton = document.querySelector('.scan-form .btn');
+            scanButton.innerHTML = 'Scanning Website...';
+            scanButton.disabled = true;
+            
+            // Simulate scanning process
+            setTimeout(() => {
+                alert('Security scan completed! We have found 3 potential security issues. Detailed report has been sent to your email.');
+                scanButton.innerHTML = 'Start Security Scan';
+                scanButton.disabled = false;
+                
+                // Clear form
+                document.getElementById('websiteUrl').value = '';
+                document.getElementById('userEmail').value = '';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
